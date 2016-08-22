@@ -1,9 +1,12 @@
 <?php
 
+namespace Testing;
+
+use mysqli;
 use Battis\MySQLSchemaLoader\Loader;
 use Battis\MySQLSchemaLoader\Exceptions\LoaderException;
 
-class LoaderTest extends PHPUnit_Framework_TestCase
+class LoaderTest extends \PHPUnit_Framework_TestCase
 {
     protected $mysql;
 
