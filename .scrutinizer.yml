@@ -1,9 +1,8 @@
 filter:
-    excluded_paths: [doc/*, examples/*, tests/*]
+    excluded_paths: [docs/*, examples/*, tests/*]
 
 checks:
     php: true
-#    javascript: true
 
 tools:
     php_code_sniffer:
@@ -11,10 +10,22 @@ tools:
             standard: "PSR2"
 
 build:
+    environment:
+        php: "5.6"
+        mysql: "5.5"
+        postgresql: false
+        mongodb: false
+        redis: false
+        neo4j: false
+        rabbitmq: false
+    dependencies:
+        before:
+            - sudo service start mysql || true
+            - mysql -e "CREATE DATABASE IF NOT EXISTS testschemaload"
     tests:
         override:
             -
-                command: 'phpunit --coverage-clover=coverage.clover'
+                command: 'vendor/bin/phpunit --coverage-clover=/tmp/coverage.xml'
                 coverage:
-                    file: 'coverage.clover'
+                    file: '/tmp/coverage.xml'
                     format: 'clover'

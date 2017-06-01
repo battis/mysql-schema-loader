@@ -1,4 +1,5 @@
 <?php
+/** Loader class */
 
 namespace Battis\MySQLSchemaLoader;
 

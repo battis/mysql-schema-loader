@@ -5,4 +5,4 @@
 
 A schema loader for MySQL applications
 
-[API Documentation in repository](https://htmlpreview.github.io/?https://raw.githubusercontent.com/battis/mysql-schema-loader/master/doc/namespaces/Battis.MySQLSchemaLoader.html).
+[API Documentation in repository](https://battis.github.io/mysql-schema-loader/namespaces/Battis.MySQLSchemaLoader.html).

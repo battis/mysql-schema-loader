@@ -1,4 +1,5 @@
 <?php
+/** LoaderException class */
 
 namespace Battis\MySQLSchemaLoader\Exceptions;
 

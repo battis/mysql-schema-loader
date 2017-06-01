@@ -1,4 +1,5 @@
 <?php
+/** Loader class */
 
 namespace Battis\MySQLSchemaLoader;
 
@@ -29,7 +30,7 @@ class Loader
      * Create a loader instance
      *
      * @param mysqli $mysql MySQL database connection
-     * @param [type] $schema Path to *.sql schema file or a literal SQL query
+     * @param string $schema Path to *.sql schema file or a literal SQL query
      *     to load the schema
      * @throws LoaderException `LoaderException::CONFIGURATION` if `$schema` is
      *     empty
@@ -73,7 +74,7 @@ class Loader
      * in a string
      *
      * @param string $haystack The string to search in.
-     * @param string[] $needles Array of strings to search for. If a needle is
+     * @param mixed $needles Array of strings to search for. If a needle is
      *     not a string, it is converted to an integer and applied as the
      *     ordinal value of a character.
      * @return int|boolean Returns the position of where the first found needle
@@ -83,9 +84,11 @@ class Loader
      */
     private function strposArray($haystack, $needles)
     {
-        foreach ($needles as $needle) {
-            if (($strpos = strpos($haystack, $needle)) !== false) {
-                return $strpos;
+        if (is_array($needles)) {
+            foreach ($needles as $needle) {
+                if (($strpos = strpos($haystack, $needle)) !== false) {
+                    return $strpos;
+                }
             }
         }
         return false;

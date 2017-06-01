@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">2</span>
+                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
                                 </a>
                             </li>
                             <li>
@@ -144,37 +144,37 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-278506429"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-761832615"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-278506429" class="accordion-body collapse in">
+            <div id="namespace-761832615" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1935712797"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-430535057"></a>
                                 <a href="../namespaces/Battis.html" style="margin-left: 30px; padding-left: 0">Battis</a>
             </div>
-            <div id="namespace-1935712797" class="accordion-body collapse ">
+            <div id="namespace-430535057" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1312491834"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-103329159"></a>
                                 <a href="../namespaces/Battis.MySQLSchemaLoader.html" style="margin-left: 30px; padding-left: 0">MySQLSchemaLoader</a>
             </div>
-            <div id="namespace-1312491834" class="accordion-body collapse ">
+            <div id="namespace-103329159" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-768529877"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2009604689"></a>
                                 <a href="../namespaces/Battis.MySQLSchemaLoader.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
             </div>
-            <div id="namespace-768529877" class="accordion-body collapse ">
+            <div id="namespace-2009604689" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -388,7 +388,7 @@
             <article class="method">
                 <h3 class="public ">__construct()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">__construct(\mysqli  <span class="argument">$mysql</span>, \Battis\MySQLSchemaLoader\[type]  <span class="argument">$schema</span>) </pre>
+                <pre class="signature" style="margin-right: 54px;">__construct(\mysqli  <span class="argument">$mysql</span>, string  <span class="argument">$schema</span>) </pre>
                 <p><em>Create a loader instance</em></p>
                 
 
@@ -400,7 +400,7 @@
                                 <td><p>MySQL database connection</p></td>
                             </tr>
                                                     <tr>
-                                <td>\Battis\MySQLSchemaLoader\[type]</td>
+                                <td>string</td>
                                 <td>$schema </td>
                                 <td><p>Path to *.sql schema file or a literal SQL query
 to load the schema</p></td>
@@ -512,7 +512,7 @@ tables were missing, otherwise returns <code>true</code> on success.</p>
             <article class="method">
                 <h3 class="private ">strposArray()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">strposArray(string  <span class="argument">$haystack</span>, array&lt;mixed,string&gt;  <span class="argument">$needles</span>) : integer|boolean</pre>
+                <pre class="signature" style="margin-right: 54px;">strposArray(string  <span class="argument">$haystack</span>, mixed  <span class="argument">$needles</span>) : integer|boolean</pre>
                 <p><em>Find the position of the first occurrence of any of several substrings
 in a string</em></p>
                 
@@ -525,7 +525,7 @@ in a string</em></p>
                                 <td><p>The string to search in.</p></td>
                             </tr>
                                                     <tr>
-                                <td>array&lt;mixed,string&gt;</td>
+                                <td>mixed</td>
                                 <td>$needles </td>
                                 <td><p>Array of strings to search for. If a needle is
 not a string, it is converted to an integer and applied as the
@@ -604,9 +604,7 @@ Returns <code>false</code> if the needle was not found.</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on 
-Warning: date_default_timezone_get(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in phar:///usr/local/bin/phpdoc/vendor/twig/twig/lib/Twig/Extension/Core.php on line 89
-August 22nd, 2016 at 16:31.
+                    on June 1st, 2017 at 13:20.
                 </section>
             </section>
         </section>
